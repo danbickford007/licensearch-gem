@@ -12,12 +12,4 @@ class Florida::Base
     [TOKEN, request('/api/auth', {token: TOKEN})['secret']]
   end  
 
-
-  private
-
-  def secret
-
-  end
-
-
 end
