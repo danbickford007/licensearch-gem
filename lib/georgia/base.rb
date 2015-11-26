@@ -1,14 +1,10 @@
-require 'florida'
+require 'georgia'
 require "net/http"
 require "uri"
-require 'request'
 
+include Georgia 
 
-include Request
-
-include Florida
-
-class Florida::Base
+class Georgia::Base
 
   TOKEN = ENV['TOKEN']
 
