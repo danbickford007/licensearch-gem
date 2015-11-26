@@ -1,8 +1,7 @@
 # Licensearch
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/licensearch`. To experiment with that code, run `bin/console` for an interactive prompt.
+This gem hooks into the licensearch.com API for state licenses. 
 
-TODO: Delete this and the text above, and describe your gem
 
 ## Installation
 
@@ -22,18 +21,29 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+You must set the token environment variable to use this gem.
+
+1. Sign up at http://www.licensearch.com
+2. Get your token and set it as follows: `export TOKEN=abc123`
+3. Query away!
+
+```ruby
+require 'licensearch'
+
+Florida::Business.query({name: 'test'})
+```
 
 ## Development
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+API docs can be found here: http://www.licensearch.com/build/index.html
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+Running specs: `rspec spec`
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/licensearch. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](contributor-covenant.org) code of conduct.
+Please make an issue with a bug.
 
+Please read the docs (http://www.licensearch.com/build/index.html) and contribute to building out this gem.
 
 ## License
 
