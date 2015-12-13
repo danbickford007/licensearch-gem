@@ -11,11 +11,13 @@ module Request
 
   def response
     http = Net::HTTP.new(@uri.host, @uri.port)
+    http.use_ssl = true
+    http.verify_mode = OpenSSL::SSL::VERIFY_NONE
     http.request(Net::HTTP::Get.new(@uri.request_uri))
   end
 
   def get_uri
-    URI.parse("http://licensearch.com#{@endpoint}")
+    URI.parse("https://licensearch.com#{@endpoint}")
   end
 
   def set_params
