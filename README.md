@@ -1,4 +1,4 @@
-# Licensearch
+# Licensearch - API no longer available
 
 This gem hooks into the licensearch.com API for state licenses. 
 
